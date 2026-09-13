@@ -9,6 +9,18 @@ const selectedOp = ref("+")
 // TODO: Add Code Here
 // Note: DO NOT USE "eval()". In security, "eval" is considered "evil"!!!
 
+const operations = {
+  "+": (a, b) => a + b,
+  "-": (a, b) => a - b,
+  "*": (a, b) => a * b,
+  "/": (a, b) => a / b,
+  "%": (a, b) => a % b
+}
+
+const result = computed(() => {
+    return operations[selectedOp.value](x.value, y.value)
+})
+
     
 </script>
 
