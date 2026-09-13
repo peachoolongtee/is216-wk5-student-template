@@ -46,7 +46,7 @@ function reset() {
 
         <div style="margin-top: 14px;">
             <!-- C. Display winner / status here -->
-             <p v-if="maxScore - scoreA - scoreB > 0">No winner yet. Keep playing!</p>
+             <p v-if="Math.max(scoreA, scoreB) < 10">No winner yet. Keep playing!</p>
              <p v-else-if="scoreA > scoreB">Winner: FALCONS</p>
              <p v-else-if="scoreB > scoreA">Winner: TIGERS</p>
         </div>
