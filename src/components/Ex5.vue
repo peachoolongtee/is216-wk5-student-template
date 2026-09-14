@@ -25,6 +25,9 @@ const mood = ref('');
         Mood:
         <!-- TODO: Build a dropdown list here for selecting the mood -->
         <br>
+        <select v-model="mood" required>
+            <option v-for="m in moods" :key="m">{{ m }}</option>
+        </select>
 
         <br>
         <button>Submit New Post</button>
